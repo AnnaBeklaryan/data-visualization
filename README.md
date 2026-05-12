@@ -69,13 +69,12 @@ python app.py
 ```
 
 4. Open the local link shown in the terminal, usually:
-  http://127.0.0.1:8050/    
 ```bash
 http://127.0.0.1:8050/  
 ```
 
 ##Project Structure
-
+```bash
 data-visualization/
 │
 ├── app.py
@@ -100,3 +99,4 @@ data-visualization/
 │   └── raw/
 │       ├── googleplaystore.csv
 │       └── googleplaystore_user_reviews.csv
+```
