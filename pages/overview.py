@@ -5,7 +5,7 @@ import plotly.express as px
 
 from utils import load_data
 
-dash.register_page(__name__, path="/")
+dash.register_page(__name__, path="/overview")
 
 df = load_data()
 
@@ -19,6 +19,11 @@ def make_card(title, value):
     )
 
 layout = html.Div([
+    html.H2("Overview", className="dashboard-title"),
+    html.P(
+        "General summary of the Google Play Store dataset.",
+        className="dashboard-subtitle"
+    ),
     dbc.Row([
         dbc.Col(make_card("Total Apps", f"{len(df):,}"), md=3),
         dbc.Col(make_card("Average Rating", f"{df['Rating'].mean():.2f}"), md=3),

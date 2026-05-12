@@ -11,6 +11,11 @@ dash.register_page(__name__, path="/ratings-pricing")
 df = load_data()
 
 layout = html.Div([
+    html.H2("Ratings & Pricing", className="dashboard-title"),
+    html.P(
+        "Analyze ratings, installs, app type, and pricing patterns.",
+        className="dashboard-subtitle"
+    ),
     dbc.Row([
         dbc.Col(
             dbc.Card(

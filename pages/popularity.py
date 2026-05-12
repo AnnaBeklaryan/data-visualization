@@ -10,6 +10,11 @@ dash.register_page(__name__, path="/popularity")
 df = load_data()
 
 layout = html.Div([
+    html.H2("Popularity", className="dashboard-title"),
+    html.P(
+        "Explore installs and reviews across app categories.",
+        className="dashboard-subtitle"
+    ),
     dbc.Row([
         dbc.Col(
             dbc.Card(
